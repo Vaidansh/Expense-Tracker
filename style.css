@@ -75,11 +75,30 @@ p{
     gap: 10px;
 }
 
+.content{
+    display: flex;
+}
+
+.lower{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    display: none;
+}
+
+.lower img{
+    height: 20px;
+}
+
+.showTransaction{
+    display: flex;
+}
+
 .transaction{
     background-color: white;
     color: black;
     display: flex;
-
+    flex-direction: column;
 }
 
 .transaction .left{

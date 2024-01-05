@@ -14,7 +14,7 @@
                 <h1>Expense Tracker</h1>
 
                 <div class="balance">
-                    <h2>₹0</h2>
+                    <h2 id="netAmount">₹0</h2>
                     <h3>Your balance</h3>
                 </div>
             </section>
@@ -23,43 +23,46 @@
                 <hr/>
 
                 <div class="transactions">
-                    <div class="transaction">
-                        <div class="left">
-                            <p>Example Text</p>
-                            <p>+ ₹ 200</p>
+                    <!-- <div class="transaction">
+                        <div class="content">
+                            <div class="left">
+                                <p>Example Text</p>
+                                <p>+ ₹ 200</p>
+                            </div>
+                            <div class="status credit">C</div>
                         </div>
-                        <div class="status credit">C</div>
-                    </div>
-                    <div class="transaction">
-                        <div class="left">
-                            <p>Example Text</p>
-                            <p>- ₹ 200</p>
+                        <div class="lower">
+                            <div class="icon">
+                                <img src="./icons/pen.svg" alt="pen" />
+                            </div>
+                            <div class="icon">
+                                <img src="./icons/trash.svg" alt="trash" />
+                            </div>
                         </div>
-                        <div class="status debit">D</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <section class="transaction_form">
                 <h3>Add Transactions</h3>
-                <form>
+                <form id="transactionForm">
                     <div class="inputs">
                         <div class="form_control">
                             <label for="text">Text</label>
-                            <input placeholder="Enter Description" type="text" name="text" id="text">
+                            <input placeholder="Enter Description" type="text" name="text" id="text" required>
                         </div>
                         <div class="form_control">
                             <label for="amount">Amount</label>
-                            <input placeholder="Enter Amount" type="number" name="amount" id="amount">
+                            <input placeholder="Enter Amount" type="number" name="amount" id="amount" required>
                         </div>
                     </div>
 
                     <div class="buttons_container">
-                        <button id="earnBtn">
-                            <p> ₹0</p>
+                        <button type="submit" id="earnBtn">
+                            <p id="earning" > ₹0</p>
                             <p> Earnings</p>
                         </button>
-                        <button id="expBtn">
-                            <p> ₹0</p>
+                        <button type="submit" id="expBtn">
+                            <p id="expense"> ₹0</p>
                             <p> Expense</p>
                         </button>
                     </div>
